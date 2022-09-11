@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "e979275e-99da-47ed-91e5-52a1f89b0777": {
+      "ProjectGuid": "e979275e-99da-47ed-91e5-52a1f89b0777",
+      "DisplayName": "PharmacyManagementWebAPI",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
