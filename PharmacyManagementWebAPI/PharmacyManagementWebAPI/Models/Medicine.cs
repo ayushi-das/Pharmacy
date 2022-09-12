@@ -1,8 +1,11 @@
-﻿namespace PharmacyManagementWebAPI.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace PharmacyManagementWebAPI.Models
 {
     public class Medicine
     {
-        public int MedId { get; set; }
+        
+        public int MedicineId { get; set; }
         public string MedName { get; set; }
         public int MedPrice { get; set; }
         public DateTime MedExpDate { get; set; }
