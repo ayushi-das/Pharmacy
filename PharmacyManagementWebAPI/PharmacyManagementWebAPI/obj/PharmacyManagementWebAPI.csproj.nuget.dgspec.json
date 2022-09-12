@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\KIIT\\Desktop\\Capgemini\\Pharmacy_Management\\PharmacyManagementWebAPI\\PharmacyManagementWebAPI\\PharmacyManagementWebAPI.csproj": {}
+    "E:\\PMS\\PharmacyManagementWebAPI\\PharmacyManagementWebAPI\\PharmacyManagementWebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\KIIT\\Desktop\\Capgemini\\Pharmacy_Management\\PharmacyManagementWebAPI\\PharmacyManagementWebAPI\\PharmacyManagementWebAPI.csproj": {
+    "E:\\PMS\\PharmacyManagementWebAPI\\PharmacyManagementWebAPI\\PharmacyManagementWebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\KIIT\\Desktop\\Capgemini\\Pharmacy_Management\\PharmacyManagementWebAPI\\PharmacyManagementWebAPI\\PharmacyManagementWebAPI.csproj",
+        "projectUniqueName": "E:\\PMS\\PharmacyManagementWebAPI\\PharmacyManagementWebAPI\\PharmacyManagementWebAPI.csproj",
         "projectName": "PharmacyManagementWebAPI",
-        "projectPath": "C:\\Users\\KIIT\\Desktop\\Capgemini\\Pharmacy_Management\\PharmacyManagementWebAPI\\PharmacyManagementWebAPI\\PharmacyManagementWebAPI.csproj",
-        "packagesPath": "C:\\Users\\KIIT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\KIIT\\Desktop\\Capgemini\\Pharmacy_Management\\PharmacyManagementWebAPI\\PharmacyManagementWebAPI\\obj\\",
+        "projectPath": "E:\\PMS\\PharmacyManagementWebAPI\\PharmacyManagementWebAPI\\PharmacyManagementWebAPI.csproj",
+        "packagesPath": "C:\\Users\\anshp\\.nuget\\packages\\",
+        "outputPath": "E:\\PMS\\PharmacyManagementWebAPI\\PharmacyManagementWebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\KIIT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\anshp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -67,7 +67,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -79,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
