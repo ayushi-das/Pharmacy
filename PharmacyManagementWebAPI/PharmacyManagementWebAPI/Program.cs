@@ -10,6 +10,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<IMedicineRepository, MedicineServices>();
+builder.Services.AddTransient<IDoctorRepository, DoctorServices>();
+builder.Services.AddTransient<IOrderRepository, OrderServices>();
+builder.Services.AddTransient<ISupplierRepository, SupplierServices>();
 
 var app = builder.Build();
 
