@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddNewtonsoftJson();
 builder.Services.AddDbContext<PharmacyDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("MyConStr"));
@@ -18,9 +18,9 @@ builder.Services.AddDbContext<PharmacyDbContext>(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IMedicineRepository, MedicineServices>();
-//builder.Services.AddTransient<IDoctorRepository, DoctorServices>();
-//builder.Services.AddTransient<IOrderRepository, OrderServices>();
-//builder.Services.AddTransient<ISupplierRepository, SupplierServices>();
+builder.Services.AddTransient<IDoctorRepository, DoctorServices>();
+builder.Services.AddTransient<IOrderRepository, OrderServices>();
+builder.Services.AddTransient<ISupplierRepository, SupplierServices>();
 
 
 

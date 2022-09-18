@@ -120,3 +120,7 @@ E:\PMS\PharmacyManagementWebAPI\PharmacyManagementWebAPI\obj\Debug\net6.0\refint
 E:\PMS\PharmacyManagementWebAPI\PharmacyManagementWebAPI\obj\Debug\net6.0\PharmacyManagementWebAPI.pdb
 E:\PMS\PharmacyManagementWebAPI\PharmacyManagementWebAPI\obj\Debug\net6.0\PharmacyManagementWebAPI.genruntimeconfig.cache
 E:\PMS\PharmacyManagementWebAPI\PharmacyManagementWebAPI\obj\Debug\net6.0\ref\PharmacyManagementWebAPI.dll
+C:\Users\KIIT\Desktop\Capgemini\Pharmacy_Management\PharmacyManagementWebAPI\PharmacyManagementWebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\KIIT\Desktop\Capgemini\Pharmacy_Management\PharmacyManagementWebAPI\PharmacyManagementWebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\KIIT\Desktop\Capgemini\Pharmacy_Management\PharmacyManagementWebAPI\PharmacyManagementWebAPI\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\KIIT\Desktop\Capgemini\Pharmacy_Management\PharmacyManagementWebAPI\PharmacyManagementWebAPI\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll

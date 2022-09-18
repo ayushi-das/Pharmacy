@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PharmacyManagementWebAPI.Models;
@@ -10,17 +11,7 @@ namespace PharmacyManagementWebAPI.Controllers
     [ApiController]
     public class MedicinesController : ControllerBase
     {
-        //private readonly PharmacyDbContext _pharmacyDbContext;
-        //public MedicinesController(PharmacyDbContext pharmacyDbContext)
-        //{
-        //    _pharmacyDbContext = pharmacyDbContext;
-        //}
-        //[HttpGet]
-        //public async Task<IActionResult> GetAllMedicines()
-        //{
-        //    var meds = await _pharmacyDbContext.Medicines.ToListAsync();
-        //    return Ok(meds);
-        //}
+
         private readonly IMedicineRepository _medicineRepository;
         public MedicinesController(IMedicineRepository medicineRepository)
         {
@@ -32,6 +23,39 @@ namespace PharmacyManagementWebAPI.Controllers
             var medicines = await _medicineRepository.GetAllMedicines();
             return Ok(medicines);
         }
+        [HttpGet("{MedName}")]
+        public async Task<IActionResult> GetMedicine([FromRoute] string MedName)
+        {
+            var medcine = await _medicineRepository.GetMedicineByName(MedName);
+            return Ok(medcine);
+        }
 
+        [HttpPost("")]
+        public async Task<IActionResult> AddMedicine([FromBody] Medicine medicine)
+        {
+            var id = await _medicineRepository.AddMedicine(medicine);
+            return CreatedAtAction(nameof(AddMedicine), id);
+
+        }
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateMedicine([FromBody] Medicine medicine, [FromRoute] int id)
+        {
+            await _medicineRepository.UpdateMedicine(id, medicine);
+            return Ok();
+
+        }
+        [HttpPatch("{id}")]
+        public async Task<IActionResult> UpdateMedicineByStock([FromBody] JsonPatchDocument medicine, [FromRoute] int id)
+        {
+            await _medicineRepository.UpdateMedicineByStock(id, medicine);
+            return Ok();
+
+        }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteMedicine([FromRoute] int id)
+        {
+            await _medicineRepository.DeleteMedicine(id);
+            return Ok();
+        }
     }
 }
