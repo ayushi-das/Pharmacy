@@ -1,8 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace PharmacyManagementWebAPI.Models
+﻿namespace PharmacyManagementWebAPI.Data
 {
-    public class Doctor
+    public class Doctors
     {
         public int DoctorId { get; set; }
         public string DocName { get; set; }
@@ -10,6 +8,5 @@ namespace PharmacyManagementWebAPI.Models
         public double DocPhnNum { get; set; }
         public string DocPassword { get; set; }
         public string DocAddress { get; set; }
-        //public ICollection<Order> Orders { get; set; }
     }
 }

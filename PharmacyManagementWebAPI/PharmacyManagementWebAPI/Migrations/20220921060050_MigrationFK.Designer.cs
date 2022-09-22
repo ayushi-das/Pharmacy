@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PharmacyManagementWebAPI.Models;
 
@@ -11,9 +12,10 @@ using PharmacyManagementWebAPI.Models;
 namespace PharmacyManagementWebAPI.Migrations
 {
     [DbContext(typeof(PharmacyDbContext))]
-    partial class PharmacyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220921060050_MigrationFK")]
+    partial class MigrationFK
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -154,6 +156,16 @@ namespace PharmacyManagementWebAPI.Migrations
                     b.Property<bool>("IsPickedUp")
                         .HasColumnType("bit");
 
+                    b.Property<string>("MedName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MedPrice")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MedicineId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("OrderDate")
                         .HasColumnType("datetime2");
 
@@ -174,6 +186,12 @@ namespace PharmacyManagementWebAPI.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SupplierId"), 1L, 1);
 
+                    b.Property<DateTime>("MedExpDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("MedPrice")
+                        .HasColumnType("int");
+
                     b.Property<int>("MedicineId")
                         .HasColumnType("int");
 
@@ -185,9 +203,6 @@ namespace PharmacyManagementWebAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("SupplierPhnNum")
-                        .HasColumnType("float");
-
                     b.HasKey("SupplierId");
 
                     b.HasIndex("MedicineId");
@@ -197,9 +212,11 @@ namespace PharmacyManagementWebAPI.Migrations
 
             modelBuilder.Entity("PharmacyManagementWebAPI.Models.Medicine", b =>
                 {
-                    b.HasOne("PharmacyManagementWebAPI.Models.Order", null)
+                    b.HasOne("PharmacyManagementWebAPI.Models.Order", "Order")
                         .WithMany("Medicines")
                         .HasForeignKey("OrderId");
+
+                    b.Navigation("Order");
                 });
 
             modelBuilder.Entity("PharmacyManagementWebAPI.Models.Order", b =>
