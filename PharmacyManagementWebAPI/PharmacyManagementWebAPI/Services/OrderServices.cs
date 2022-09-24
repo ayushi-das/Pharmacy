@@ -26,7 +26,7 @@ namespace PharmacyManagementWebAPI.Services
                 IsPickedUp = o.IsPickedUp,
                 Admin = o.Admin,
                 AdminId = o.AdminId,
-                Medicines = o.Medicines.ToList(),
+                
                 Doctor = o.Doctor,
                 DoctorId = o.DoctorId,
             }).ToListAsync();
@@ -48,7 +48,7 @@ namespace PharmacyManagementWebAPI.Services
                 // Doctor= order.Doctor,
                 DoctorId = order.DoctorId,
                 //MedicineId = order.MedicineId,
-                Medicines = order.Medicines.ToList<Medicine>()
+                
                 
                 };
            
